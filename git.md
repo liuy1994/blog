@@ -50,8 +50,28 @@ gui打开当前路径|start .
 
   \后面打回车。并不会执行命令
 
+# 查找
+find . -name 1.txt	//查找1.txt
+find . -name "demo*" -type d	//tpye表示找的是目录  demo*表示所有含demo的目录例如demo1 、demo2
 
+# vim ~/.bashrc
+## 1. 使用 ~/.bashrc 
+alias XXX=“命令”	//例如f=“ls -a”
+source ~/.bashrc	//bashrc改动生效
 
+## 2. 使用 bash 函数
+
+在 ~/.bashrc 里面添加一个函数
+
+frank (){
+echo 'frank is awesome'
+}
+是 bashrc 生效
+source ~/.bashrc
+运行 frank 函数
+## 3. 不使用 bashrc
+运行 alias frank="echo 'frank is awesome'"
+运行 frank
 
 
 
