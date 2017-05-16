@@ -1,0 +1,124 @@
+{
+    border:1px solid red;
+}
+ul{
+    list-style: none;
+}
+body{
+    margin:0 auto;
+    width:1440px;
+}
+@media(max-width:1439px){
+    body{
+        width:960px;
+    }
+}
+@media(max-width:959px){
+    body{
+        width:640px;
+    }
+}
+@media(max-width:639px){
+    body{
+        width:320px;
+    }
+}
+/*↑begin↑*/
+
+.profile{
+    text-align: center;
+    background-color: #eee;
+}
+.profile .avatar{
+    margin-top:54px;
+    margin-bottom: 41px;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    background-color:#d8d8d8; 
+}
+.profile .keyword span{
+    display: inline-block;
+    padding: 0.2em 0.3em;
+    margin: 0 1em 35px 1em;
+    background-color: #d8d8d8;
+}
+/*↑profile↑*/
+
+.summary{
+    text-align: center;
+    background-color: #aaa;
+    padding-top: 75px;    
+}
+.summary .biaoti1{
+    width: 376px;
+    margin:0 auto 35px auto;
+    background-color: #d8d8d8;
+    padding: 0.3em 0.5em;
+    border-radius: 20px;
+}
+.summary .biaoti2{
+    display: none;
+}
+@media(max-width:639px){
+    .summary .biaoti1{
+        display: none;
+    }
+    .summary .biaoti2{
+        display: inline-block;
+        width: 200px;
+        padding:0.2em 0;
+        margin:0 auto 19px auto;
+        background-color: #d8d8d8;
+        padding: 0.3em 0.5em;
+        border-radius: 20px;
+    }
+}
+.summary p{
+    display: inline-block;
+    background-color: #e8e7e7;
+    padding: 0.2em 0.3em;
+    border-radius: 20px;
+}
+.summary .second{
+    margin:19px auto 102px auto;
+}
+/*↑summary↑*/
+
+.album{
+    text-align: center;
+}
+.album ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -24px;
+    margin-right:16px;
+}
+@media(min-width:1440px){
+    .album ul{
+        margin-left:256px;
+        margin-right:256px;
+    }
+}
+.album ul>li{
+    margin:2px;
+}
+.album img{
+    width: 288px;
+    height: 162px;
+    background-color: #d8d8d8;
+    border-radius: 5px;
+}
+.album h3{
+    background-color: #bcbcbc;
+    border-radius: 5px;
+    width:204px;
+    padding:0.2em 0.4em;
+}
+.album p{
+    background-color: #ececec;
+    border-radius: 5px;
+    font-size: 0.9em;
+    padding:0.1em 0.2em;
+}
