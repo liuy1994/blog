@@ -7,170 +7,204 @@
 
 
     <style>
-        * {margin: 0;padding: 0;box-sizing: border-box;}
-        clearfix::after {content: '';display: block;clear: both;}
-        *::before {box-sizing: border-box;}
-        *::after {box-sizing: border-box;}
-        ol,ul {list-style: none;}
-        .topbarWrapper {background-color: #000;width: 1920px;}
-        .topbar {width: 1240px;height: 90px;background-color: #000;margin: 0 auto;}
-        .topbar .log {background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 2px -25px;width: 190px; height: 100px;float: left;margin-left: -10px;position: absolute;z-index: 2;}
-        .topbar .navigation .menu {float: left;margin-left: 190px;}
-        .topbar .navigation .menu {float: left;}
-        .topbar .navigation .menu li {text-align: center;float: left;width: 120px;height: 68px;margin-top: 30px;color: #fff;font-size: 18px;}
-        .topbar .navigation .menu li small {color: #aaa;font-size: 13px;text-transform: uppercase;}
-        .topbar .icons {float: left;}
-        .topbar .icons .iconSearch {background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -8px 0;width: 27px;height: 27px;float: left;margin-top: 25px;margin-left: 13px;}
-        .topbar .icons .iconMobile {background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -45px 0;width: 21px;height: 27px;float: left;margin-top: 25px;margin-left: 21px;}
-        .topbar .user {float: left;}
-        .topbar .user .avatar {background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 0 -165px;width: 74px;height: 74px;position: absolute;z-index: 2;margin-top: 4px;margin-left: 23px;}
-        .topbar .user img {margin: 12px 27px;float: left;border-radius: 50%;}
-        .topbar .user .userInfo {margin-left: 125px; margin-top: 25px;}
-        .topbar .user .userInfo p {font-size: 17px;color: #fff;}
-        .topbar .user .userInfo small {font-size: 13px;color: #aaa;}
-        .topbar .subMenu { width: 100vw;background-color: rgba(0, 0, 0, 0.5);margin-top: -10px;margin-left: -340px;float: left;display: none;}
-        .topbar .subMenu.active {display: block;}
-        .topbar .subMenu ul { margin-left: 530px;margin-top: 20px;}
-        .topbar .subMenu li {line-height: 25px;width: 120px;float: left;text-align: center;font-size: 16px;}
-        .topbar .subMenu li a {display: block;}
-        .topbar .userPopover {display: none;width: 350px;height: 135px;float: right;background-color: rgba(0, 0, 0, 0.5);}
-        .topbar .userPopover.active {display: block;}
-        .topbar .userPopover .text {color: #aaa;font-size: 16px;text-align: left;margin: 30px 15px;}
-        .topbar .userPopover .textA {height: 40px;background-color: black;color: #fff;font-size: 18px;text-align: center;padding-top: 10px;padding-bottom: 10px;}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        clearfix::after { content: ''; display: block; clear: both; }
+
+        *::before { box-sizing: border-box; }
+
+        *::after { box-sizing: border-box; }
+
+        ol, ul { list-style: none; }
+
+        .topbarWrapper { background-color: #000; width: 1920px; }
+
+        .topbar { width: 1240px; height: 90px; background-color: #000; margin: 0 auto; }
+
+        .topbar .log { background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 2px -25px; width: 190px; height: 100px; float: left; margin-left: -10px; position: absolute; z-index: 2; }
+
+        .topbar .navigation .menu { float: left; margin-left: 190px; }
+
+        .topbar .navigation .menu { float: left; }
+
+        .topbar .navigation .menu li { text-align: center; float: left; width: 120px; height: 68px; margin-top: 30px; color: #fff; font-size: 18px; }
+
+        .topbar .navigation .menu li small { color: #aaa; font-size: 13px; text-transform: uppercase; }
+
+        .topbar .icons { float: left; }
+
+        .topbar .icons .iconSearch { background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -8px 0; width: 27px; height: 27px; float: left; margin-top: 25px; margin-left: 13px; }
+
+        .topbar .icons .iconMobile { background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -45px 0; width: 21px; height: 27px; float: left; margin-top: 25px; margin-left: 21px; }
+
+        .topbar .user { float: left; }
+
+        .topbar .user .avatar { background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 0 -165px; width: 74px; height: 74px; position: absolute; z-index: 2; margin-top: 4px; margin-left: 23px; }
+
+        .topbar .user img { margin: 12px 27px; float: left; border-radius: 50%; }
+
+        .topbar .user .userInfo { margin-left: 125px; margin-top: 25px; }
+
+        .topbar .user .userInfo p { font-size: 17px; color: #fff; }
+
+        .topbar .user .userInfo small { font-size: 13px; color: #aaa; }
+
+        .topbar .subMenu { width: 100vw; background-color: rgba(0, 0, 0, 0.5); margin-top: -10px; margin-left: -340px; float: left; display: none; }
+
+        .topbar .subMenu.active { display: block; }
+
+        .topbar .subMenu ul { margin-left: 530px; margin-top: 20px; }
+
+        .topbar .subMenu li { line-height: 25px; width: 120px; float: left; text-align: center; font-size: 16px; }
+
+        .topbar .subMenu li a { display: block; }
+
+        .topbar .userPopover { display: none; width: 350px; height: 135px; float: right; background-color: rgba(0, 0, 0, 0.5); }
+
+        .topbar .userPopover.active { display: block; }
+
+        .topbar .userPopover .text { color: #aaa; font-size: 16px; text-align: left; margin: 30px 15px; }
+
+        .topbar .userPopover .textA { height: 40px; background-color: black; color: #fff; font-size: 18px; text-align: center; padding-top: 10px; padding-bottom: 10px; }
+
+        .banner {
+            width: 1920px; height: 750px; background: url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 2px -25px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="page">
-        <div class="topbarWrapper">
-            <div class="topbar">
-                <div class="log clearfix"></div>
-                <div class="navigation clearfix">
-                    <ol class="menu">
+<div class="page">
+    <div class="topbarWrapper">
+        <div class="topbar">
+            <div class="log clearfix"></div>
+            <div class="navigation clearfix">
+                <ol class="menu">
 
-                        <li>
-                            <p>游戏资料</p>
-                            <small>game info</small>
+                    <li>
+                        <p>游戏资料</p>
+                        <small>game info</small>
 
-                        </li>
-                        <li>
-                            <p>商城/合作</p>
-                            <small>store</small>
-                        </li>
-                        <li>
-                            <p>用户互动</p>
-                            <small>community</small>
-                        </li>
-                        <li>
-                            <p>赛事中心</p>
-                            <small>events</small>
-                        </li>
-                        <li>
-                            <p>自助系统</p>
-                            <small>system</small>
-                        </li>
-                    </ol>
+                    </li>
+                    <li>
+                        <p>商城/合作</p>
+                        <small>store</small>
+                    </li>
+                    <li>
+                        <p>用户互动</p>
+                        <small>community</small>
+                    </li>
+                    <li>
+                        <p>赛事中心</p>
+                        <small>events</small>
+                    </li>
+                    <li>
+                        <p>自助系统</p>
+                        <small>system</small>
+                    </li>
+                </ol>
 
+            </div>
+            <div class="icons clearfix">
+                <div class="iconSearch clearfix"></div>
+                <div class="iconMobile clearfix"></div>
+            </div>
+            <div class="user clearfix">
+                <div class="avatar clearfix"></div>
+                <img src="http://ossweb-img.qq.com/images/lol/v2/personal/avatar/default.png" alt="头像" class="cleafix">
+                <div class="userInfo clearfix">
+                    <p>亲爱的召唤师，欢迎<a href="#">登录</a></p>
+                    <small>登陆后查看自己的战绩、资产、声望值等</small>
                 </div>
-                <div class="icons clearfix">
-                    <div class="iconSearch clearfix"></div>
-                    <div class="iconMobile clearfix"></div>
-                </div>
-                <div class="user clearfix">
-                    <div class="avatar clearfix"></div>
-                    <img src="http://ossweb-img.qq.com/images/lol/v2/personal/avatar/default.png" alt="头像" class="cleafix">
-                    <div class="userInfo clearfix">
-                        <p>亲爱的召唤师，欢迎<a href="#">登录</a></p>
-                        <small>登陆后查看自己的战绩、资产、声望值等</small>
-                    </div>
 
-                </div>
-                <div class="subMenu clearfix">
-                    <ul>
-                        <li>
-                            <a href="#" target="_blank">新手指引</a>
-                            <a href="#" target="_blank"><i class="icon-hot"></i>资料库</a>
-                            <a href="#" target="_blank">攻略中心</a>
-                            <a href="#" target="_blank">模式实验室</a>
-                            <a href="#" target="_blank">海克斯战利品库</a>
-                            <a href="#" target="_blank">屏保下载</a>
-                            <a href="#" target="_blank"><i class="icon-new"></i>宇宙官网</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#"><i class="publicspr ico-h"></i>点券充值</a>
-                            <a target="_blank" href="#">道聚城</a>
-                            <a href="#" target="_blank">周边商城</a>
-                            <a href="#" target="_blank">LOL桌游</a>
-                            <a href="#" target="_blank">LOL信用卡</a>
-                            <a href="#" target="_blank">网吧特权</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">在线客服</a>
-                            <a href="#" target="_blank">视频中心</a>
-                            <a href="#" target="_blank"><i class="icon-hot"></i>活动中心</a>
-                            <a target="_blank" href="#">官方论坛</a>
-                            <a href="#" target="_blank">官方微信</a>
-                            <a href="#" target="_blank">官方微博</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#"><i class="icon-hot"></i>LPL职业联赛</a>
-                            <a target="_blank" href="#">甲级职业联赛</a>
-                            <a target="_blank" href="#">德玛西亚杯</a>
-                            <a target="_blank" href="#">城市争霸赛</a>
-                            <a target="_blank" href="#">高校联赛</a>
-                            <a target="_blank" href="#">校际精英赛</a>
-                            <a target="_blank" href="#">高校自发赛</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="#">点亮图标</a>
-                            <a target="_blank" href="#">声望系统</a>
-                            <a target="_blank" href="#"><i class="icon-hot"></i>封号查询</a>
-                            <a target="_blank" href="#">体验服申请</a>
-                            <a target="_blank" href="#">服务器状态查询</a>
-                            <a target="_blank" href="#">裁决之镰</a>
-                            <a target="_blank" href="#"><i class="icon-new"></i>峡谷之巅</a>
-                        </li>
+            </div>
+            <div class="subMenu clearfix">
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">新手指引</a>
+                        <a href="#" target="_blank"><i class="icon-hot"></i>资料库</a>
+                        <a href="#" target="_blank">攻略中心</a>
+                        <a href="#" target="_blank">模式实验室</a>
+                        <a href="#" target="_blank">海克斯战利品库</a>
+                        <a href="#" target="_blank">屏保下载</a>
+                        <a href="#" target="_blank"><i class="icon-new"></i>宇宙官网</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="#"><i class="publicspr ico-h"></i>点券充值</a>
+                        <a target="_blank" href="#">道聚城</a>
+                        <a href="#" target="_blank">周边商城</a>
+                        <a href="#" target="_blank">LOL桌游</a>
+                        <a href="#" target="_blank">LOL信用卡</a>
+                        <a href="#" target="_blank">网吧特权</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">在线客服</a>
+                        <a href="#" target="_blank">视频中心</a>
+                        <a href="#" target="_blank"><i class="icon-hot"></i>活动中心</a>
+                        <a target="_blank" href="#">官方论坛</a>
+                        <a href="#" target="_blank">官方微信</a>
+                        <a href="#" target="_blank">官方微博</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="#"><i class="icon-hot"></i>LPL职业联赛</a>
+                        <a target="_blank" href="#">甲级职业联赛</a>
+                        <a target="_blank" href="#">德玛西亚杯</a>
+                        <a target="_blank" href="#">城市争霸赛</a>
+                        <a target="_blank" href="#">高校联赛</a>
+                        <a target="_blank" href="#">校际精英赛</a>
+                        <a target="_blank" href="#">高校自发赛</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="#">点亮图标</a>
+                        <a target="_blank" href="#">声望系统</a>
+                        <a target="_blank" href="#"><i class="icon-hot"></i>封号查询</a>
+                        <a target="_blank" href="#">体验服申请</a>
+                        <a target="_blank" href="#">服务器状态查询</a>
+                        <a target="_blank" href="#">裁决之镰</a>
+                        <a target="_blank" href="#"><i class="icon-new"></i>峡谷之巅</a>
+                    </li>
 
-                    </ul>
+                </ul>
+            </div>
+            <div class="userPopover">
+                <div class="text">
+                    <p>登录并且绑定大区后才可查看您的具体信息哦~（包括战绩、资产、声望值等）</p>
                 </div>
-                <div class="userPopover">
-                    <div class="text">
-                        <p>登录并且绑定大区后才可查看您的具体信息哦~（包括战绩、资产、声望值等）</p>
-                    </div>
-                    <div class="textA">
-                        <a href="#">
-                            <p>进入个人中心</p>
-                        </a>
-                    </div>
+                <div class="textA">
+                    <a href="#">
+                        <p>进入个人中心</p>
+                    </a>
                 </div>
             </div>
-
         </div>
-    </div>
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-        $('.navigation').on('mouseenter', function () {
-            $('.subMenu').addClass('active')
-        }).on('mouseleave', function () {
-            $('.subMenu').removeClass('active')
-        })
-        $('.subMenu').on('mouseenter', function () {
-            $('.subMenu').addClass('active')
-        }).on('mouseleave', function () {
-            $('.subMenu').removeClass('active')
-        })
 
-        $('.user').on('mouseenter', function () {
-            $('.userPopover').addClass('active')
-        }).on('mouseleave', function () {
-            $('.userPopover').removeClass('active')
-        })
-        $('.userPopover').on('mouseenter', function () {
-            $('.userPopover').addClass('active')
-        }).on('mouseleave', function () {
-            $('.userPopover').removeClass('active')
-        })
-    </script>
+    </div>
+    <div class="banner">hahahahah</div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $('.navigation').on('mouseenter', function () {
+        $('.subMenu').addClass('active')
+    }).on('mouseleave', function () {
+        $('.subMenu').removeClass('active')
+    })
+    $('.subMenu').on('mouseenter', function () {
+        $('.subMenu').addClass('active')
+    }).on('mouseleave', function () {
+        $('.subMenu').removeClass('active')
+    })
+
+    $('.user').on('mouseenter', function () {
+        $('.userPopover').addClass('active')
+    }).on('mouseleave', function () {
+        $('.userPopover').removeClass('active')
+    })
+    $('.userPopover').on('mouseenter', function () {
+        $('.userPopover').addClass('active')
+    }).on('mouseleave', function () {
+        $('.userPopover').removeClass('active')
+    })
+</script>
 </body>
 
 </html>
