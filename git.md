@@ -1,4 +1,4 @@
-
+fid = fopen(filename,'w','n','UTF-8');
 
 
 
