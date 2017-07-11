@@ -2,14 +2,201 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>LOL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        video, img {
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .topbar-wrapper {
+            background-color: #000;
+            position: relative;
+            color: #fff;
+        }
+
+        .topbar {
+            width: 1240px;
+            height: 90px;
+            margin: 0 auto;
+        }
+
+        .navigation {
+            position: relative;
+            left: 190px;
+        }
+
+        .menu li {
+            float: left;
+            width: 120px;
+            height: 90px;
+            font-size: 19px;
+            text-align: center;
+            line-height: 1;
+            padding: 30px 0;
+        }
+
+        .menu small {
+            text-transform: uppercase;
+            color: #bbb;
+            font-size: 13px;
+        }
+
+        .subMenu {
+            display: none;
+            position: absolute;
+            left: -190px;
+            top: 90px;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 1240px;
+            padding-left: 190px;
+        }
+        .subMenu li{
+            font-size: 16px;
+            line-height: 1.8;
+            width:120px;
+            float: left;
+            text-align: center;
+        }
+        .subMenu li a{
+            display: block;
+        }
+        .subMenu.active {
+            display: block;
+        }
+
+        .icons {
+            width: 90px;
+            height: 90px;
+            float: left;
+            margin-left: 200px;
+        }
+
+        .icons .iconSearch {
+            float: left;
+            width: 27px;
+            height: 27px;
+            background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat -8px 0px;
+            margin-top: 25px;
+            margin-left: 3px;
+        }
+
+        .icons .iconMobile {
+            float: left;
+            width: 21px;
+            height: 27px;
+            background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat -45px 0px;
+            margin-top: 25px;
+            margin-left: 21px;
+        }
+
+        .user {
+            width: 350px;
+            height: 90px;
+            float: left;
+        }
+
+        .user .avatar {
+            background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 5px -161px;
+            position: absolute;
+            padding-top: 15px;
+            padding-left: 5px;
+            height: 90px;
+            width: 74px;
+        }
+
+        .user .avatar img {
+            border-radius: 50%;
+            position: relative;
+            left: 16px;
+            top: 9px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .user .text {
+            margin-left: 100px;
+            font-size: 17px;
+            margin-top: 28px;
+            line-height: 1.2;
+        }
+
+        .user .text small {
+            font-size: 13px;
+            color: #bbb;
+        }
+
+        .userPopover {
+            display: none;
+            position: absolute;
+            right:335px;
+            top: 90px;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 350px;
+            height:130px;
+            font-size: 14px;
+        }
+        .userPopover.active {
+             display: block;
+         }
+        .userPopover .textA{
+            height:100px;
+            line-height:1.5;
+            padding:25px 20px 20px 20px;
+        }
+        .userPopover .textB{
+            height:30px;
+            background-color: #000;
+            color:white;
+            padding-top:8px;
+            text-align: center;
+        }
+
+        .banner {
+            width: 1240px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            height: 484px;
+            padding-top: 0.1px;
+        }
+
+        .banner .logo {
+            width: 190px;
+            height: 100px;
+            position: absolute;
+            left: -8px;
+            top: -85px;
+            background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 0 -30px;
+        }
+    </style>
 </head>
 <body>
 <div class="page">
     <div class="topbar-wrapper">
         <div class="topbar">
             <div class="navigation">
-                <ul class="menu">
+                <ul class="menu clearfix">
                     <li>
                         <p>游戏资料</p>
                         <p>
@@ -87,48 +274,74 @@
                     </li>
                 </ul>
             </div>
-            <div class="icons">
+            <div class="icons clearfix">
                 <div class="iconSearch"></div>
                 <div class="iconMobile"></div>
             </div>
-            <div class="user">
-                <div class="avatar">
-                    <img src="http://ossweb-img.qq.com/images/lol/v2/personal/avatar/default.png" alt="用户头像">
+            <div class="user clearfix">
+                <div class="avatar clearfix">
+                    <img src="https://ooo.0o0.ooo/2017/07/11/59648ff50b7da.png" alt="用户头像">
                 </div>
                 <div class="text">
-                    <p>您已登录，请绑定大区或注销</p>
+                    <p>亲爱的召唤师，欢迎<a href="#">登录</a></p>
                     <p>
-                        <small>绑定大区后查看所在大区的战绩、资产、声望值等</small>
+                        <small>登陆后查看自己的战绩、资产、声望值等</small>
                     </p>
                 </div>
+                <div class="userPopover">
+                    <div class="textA">登录并且绑定大区后才可查看您的具体信息哦~（包括战绩、资产、声望值等）</div>
+                    <div class="textB"><a href="#">进入个人中心</a></div>
+                </div>
             </div>
-            <div class="userPopover">
-                <p>登录并且绑定大区后才可查看您的具体信息哦~（包括战绩、资产、声望值等）</p>
-                <p><a href="#">进入个人中心</a></p>
-            </div>
+
         </div>
     </div>
-    <div class="banner-wrapper">
-        <div class="banner">
-            <div class="logo"></div>
-            <div class="introduce">
-                <h2>对决！黎明VS黑夜</h2>
-                <p>秩序，混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
-                <div class="video-wrapper">
-                    <div class="cover">
-                        <div class="icon icon-play"></div>
-                        <div class="icon icon-pause"></div>
-                    </div>
-                    <video src="./videos/small-v7.mp4"></video>
+
+</div>
+<div class="banner-wrapper">
+    <div class="banner">
+        <div class="logo"></div>
+        <div class="introduce">
+            <h2>对决！黎明VS黑夜</h2>
+            <p>秩序，混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
+            <div class="video-wrapper">
+                <div class="cover">
+                    <div class="icon icon-play"></div>
+                    <div class="icon icon-pause"></div>
                 </div>
-                <a href="#">查看详情</a>
+                <video src="./videos/small-v7.mp4"></video>
             </div>
-            <div class="version">
-                <p>当前游戏版本 <span>Ver 7.13</span></p>
-                <div class="versionMore">版本详情</div>
-            </div>
+            <a href="#">查看详情</a>
+        </div>
+        <div class="version">
+            <p>当前游戏版本 <span>Ver 7.13</span></p>
+            <div class="versionMore">版本详情</div>
         </div>
     </div>
 </div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $('.navigation').on('mouseenter', function () {
+        $('.subMenu').addClass('active')
+    }).on('mouseleave', function () {
+        $('.subMenu').removeClass('active')
+    })
+    $('.subMenu').on('mouseenter', function () {
+        $('.subMenu').addClass('active')
+    }).on('mouseleave', function () {
+        $('.subMenu').removeClass('active')
+    })
+
+    $('.user').on('mouseenter', function () {
+        $('.userPopover').addClass('active')
+    }).on('mouseleave', function () {
+        $('.userPopover').removeClass('active')
+    })
+    $('.userPopover').on('mouseenter', function () {
+        $('.userPopover').addClass('active')
+    }).on('mouseleave', function () {
+        $('.userPopover').removeClass('active')
+    })
+</script>
 </body>
 </html>
