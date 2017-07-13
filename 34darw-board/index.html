@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>画图</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            overflow:hidden;
+            background-color:#ddd;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li{
+            width:35px;
+            height:35px;
+        }
+        img{
+            width:25px;
+            height:25px;
+            padding: 5px;
+        }
+        .active>img{
+            width:35px;
+            height:35px;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <ul class="controls">
+            <li class="pen active">
+                <img src="./images/pen.png" alt="画笔">
+            </li>
+            <li class="eraser">
+                <img src="./images/eraser.png" alt="橡皮擦">
+            </li>
+            <li class="clear">
+                <img src="./images/clear.png" alt="清除">
+            </li>
+            <li class="save">
+                <img src="./images/save.png" alt="保存">
+            </li>
+        </ul>
+    <canvas id="app"></canvas>
+    </div>
+    <script>
+        let li = document.querySelectorAll('li')
+        for(i=0;i<li.length;i++){
+            li[i].addEventListener('click',function(e){
+                let target = e.currentTarget
+                if(target.classList[0] === 'pen' || target.classList[0] === 'eraser'){
+                    target.classList.add('active')
+                    for(j=0;j<li.length;j++){
+                        if(li[j].classList[0] !== target.classList[0]){
+                            li[j].classList.remove('active')
+                        }
+                    }
+                }else if(target.classList[0] === 'clear'){
+                    context.clearRect(0,0, canvas.width, canvas.height)
+                }else if(target.classList[0] === 'save'){
+                    let canvas=document.getElementById("app")
+                    let data=canvas.toDataURL("image/png")
+                    let newWindow=window.open('about:blank','image from canvas')
+                    newWindow.document.write("<img src='"+data+"' alt='from canvas'/>")
+                }
+            })
+        }
+        let canvas = document.querySelector("canvas")
+        canvas.width = document.documentElement.clientWidth
+        canvas.height = document.documentElement.clientHeight
+        let context = canvas.getContext("2d")
+        let prePoint
+        canvas.addEventListener('touchmove',function(e){
+            e.preventDefault()
+            let {pageX,pageY} = e.touches[0]
+            console.log(li[0].classList[1] === 'active')
+            if (li[0].classList[1] === 'active'){
+                if(prePoint){
+                    context.strokeStyle = 'blue'
+                    context.beginPath()
+                    context.moveTo(prePoint.pageX,prePoint.pageY - 35)
+                    context.lineTo(pageX,pageY - 35)
+                    context.stroke()
+                }
+                prePoint = {pageX,pageY}
+            }else if(li[1].classList[1] === 'active'){
+                context.clearRect(pageX - 5,pageY - 40, 15, 15)
+            }
+        })
+        canvas.addEventListener('touchend',function(){
+            prePoint = null
+        })
+    </script>
+</body>
+</html>
