@@ -338,7 +338,39 @@
             color: #d1ab57;
             border-bottom: 2px solid #d1ab57;
         }
-
+        .tab-wrapper .contents .news{
+            display: none;
+        }
+        .tab-wrapper .contents .news.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .slides{
+            width:820px;
+            position: relative;
+            left: 335px;
+        }
+        .tab-wrapper .contents .news .slides .slidesjs-pagination::after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .tab-wrapper .contents .news .slides .slidesjs-pagination li{
+            float: left;
+            width:20%;
+            background-color:black; 
+        }
+        .tab-wrapper .contents .news .slides .slidesjs-pagination li a{
+            color:white;
+            font-size: 14px;
+            line-height: 50px;
+            text-align: center;
+            display: block;
+        }
+            
+        .tab-wrapper .contents .news .slides .slidesjs-pagination li .active{
+            color:#e9c06c;
+            background: #303030;
+        }
     </style>
 </head>
 <body>
@@ -457,7 +489,7 @@
                         <div class="icon icon-play"></div>
                         <div class="icon icon-pause"></div>
                     </div>
-                    <video src="./videos/small-v7.mp4"></video>
+                    <video src="./pic/small-v7.mp4"></video>
                 </div>
                 <a href="#">查看详情</a>
             </div>
@@ -477,13 +509,13 @@
             </ul>
         </div>
         <div class="contents">
-            <div class="news">
-                <div class="slides">
-                    <img src="" alt="无极剑圣斩星魔剑">
-                    <img src="" alt="庆LPL登顶亚洲">
-                    <img src="" alt="LPL15日赛程">
-                    <img src="" alt="洲际赛冠军之选">
-                    <img src="" alt="新英雄凯隐大揭密">
+            <div class="news active">
+                <div  class="slides">
+                    <img src="./pic/101.jpg" alt="无极剑圣斩星魔剑">
+                    <img src="./pic/102.jpg" alt="庆LPL登顶亚洲">
+                    <img src="./pic/103.jpg" alt="LPL15日赛程">
+                    <img src="./pic/104.jpg" alt="洲际赛冠军之选">
+                    <img src="./pic/105.jpg" alt="新英雄凯隐大揭密">
                 </div>
 
 
@@ -532,11 +564,39 @@
     }).on('mouseleave', function () {
         $('.topbar .user .userPopover').removeClass('active')
     })
-    $('.video-wrapper > .cover > .icon-play').on('click', function (e) {
+    $('.video-wrapper  .cover  .icon-play').on('click', function (e) {
         let $play = $(e.currentTarget)
         $play.closest('.video-wrapper').find('video')[0].play()
         $play.closest('.cover').hide()
     })
+    $('.tab-wrapper .tabs ul').on('click','li',function(e){
+        let $li = $(e.currentTarget)
+        let index = $li.index()
+        $li.addClass('active')
+        $li.siblings().removeClass('active')
+        console.log(1)
+        $li.parent().parent().next().children().eq(index).addClass('active')
+        $li.parent().parent().next().children().eq(index).siblings().removeClass('active')
+    })
 </script>
+<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<script src="./js/jquery.slides.min.js"></script>
+<script>
+    $(function(){
+      $(".slides").slidesjs({
+          height:350,
+        navigation:false,
+        callback: {
+          loaded: function(){
+            var texts = ['无极剑圣斩星魔剑','庆LPL登顶亚洲','LPL15日赛程','洲际赛冠军之选','新英雄凯隐大揭密']
+            $('.slidesjs-pagination-item').each(function(index, element){
+              element.children[0].innerText = texts[index]
+            })
+          }
+        }
+      })
+    })
+    
+  </script>
 </body>
 </html>
