@@ -41,28 +41,28 @@
             margin: 0 auto;
         }
 
-        .navigation {
+        .topbar .navigation {
             position: relative;
             left: 190px;
         }
 
-        .menu li {
+        .topbar .navigation .menu li {
             float: left;
             width: 120px;
             height: 90px;
-            font-size: 19px;
+            font-size: 18px;
             text-align: center;
             line-height: 1;
             padding: 30px 0;
         }
 
-        .menu small {
+        .topbar .navigation .menu small {
             text-transform: uppercase;
             color: #bbb;
             font-size: 13px;
         }
 
-        .subMenu {
+        .topbar .navigation .subMenu {
             display: none;
             position: absolute;
             left: -190px;
@@ -73,7 +73,7 @@
             z-index: 2;
         }
 
-        .subMenu li {
+        .topbar .navigation .subMenu li {
             font-size: 16px;
             line-height: 1.8;
             width: 120px;
@@ -81,22 +81,22 @@
             text-align: center;
         }
 
-        .subMenu li a {
+        .topbar .navigation .subMenu li a {
             display: block;
         }
 
-        .subMenu.active {
+        .topbar .navigation .subMenu.active {
             display: block;
         }
 
-        .icons {
+        .topbar .icons {
             width: 90px;
             height: 90px;
             float: left;
             margin-left: 200px;
         }
 
-        .icons .iconSearch {
+        .topbar .icons .iconSearch {
             float: left;
             width: 27px;
             height: 27px;
@@ -105,7 +105,7 @@
             margin-left: 3px;
         }
 
-        .icons .iconMobile {
+        .topbar .icons .iconMobile {
             float: left;
             width: 21px;
             height: 27px;
@@ -114,13 +114,13 @@
             margin-left: 21px;
         }
 
-        .user {
+        .topbar .user {
             width: 350px;
             height: 90px;
             float: left;
         }
 
-        .user .avatar {
+        .topbar .user .avatar {
             background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 5px -161px;
             position: absolute;
             padding-top: 15px;
@@ -129,7 +129,7 @@
             width: 74px;
         }
 
-        .user .avatar img {
+        .topbar .user .avatar img {
             border-radius: 50%;
             position: relative;
             left: 16px;
@@ -138,23 +138,21 @@
             height: 40px;
         }
 
-        .user .text {
-            margin-left: 100px;
+        .topbar .user .text {
             font-size: 17px;
-            margin-top: 28px;
             line-height: 1.2;
+            padding: 28px 0 22px 100px;
         }
 
-        .user .text small {
-            font-size: 13px;
+        .topbar .user .text small {
+            font-size: 12px;
             color: #bbb;
         }
 
-        .userPopover {
+        .topbar .user .userPopover {
             display: none;
             position: relative;
             right: 0px;
-            top: 22px;
             background-color: rgba(0, 0, 0, 0.6);
             width: 350px;
             height: 130px;
@@ -162,17 +160,17 @@
             z-index: 2;
         }
 
-        .userPopover.active {
+        .topbar .user .userPopover.active {
             display: block;
         }
 
-        .userPopover .textA {
+        .topbar .user .userPopover .textA {
             height: 100px;
             line-height: 1.5;
             padding: 25px 20px 20px 20px;
         }
 
-        .userPopover .textB {
+        .topbar .user .userPopover .textB {
             height: 30px;
             background-color: #000;
             color: white;
@@ -198,9 +196,105 @@
             width: 190px;
             height: 100px;
             position: absolute;
-            left: -8px;
             top: -85px;
+            left: -9px;
             background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 0 -30px;
+        }
+
+        .banner .introduce {
+            padding-top: 80px;
+        }
+
+        .banner .introduce h2 {
+            font-size: 53px;
+            font-weight: bolder;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 232, 184, 1)), to(rgba(175, 133, 48, 1)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-bottom: 20px;
+        }
+
+        .banner .introduce p {
+            font-size: 14px;
+            line-height: 1.5;
+            padding-bottom: 20px;
+            color: #dddddd;
+        }
+
+        .banner .introduce a {
+            width: 160px;
+            line-height: 40px;
+            color: #CB9D46;
+            display: block;
+            border-top: 4px solid #6B5128;
+            border-bottom: 4px solid #B58B3D;
+            font-size: 14px;
+            background-position: 0 0, 100% 0;
+            background-repeat: no-repeat;
+            background-size: 4px 100%;
+            background-image: linear-gradient(to bottom, #6B5128 0%, #B58B3D 100%), linear-gradient(to bottom, #6B5128 0%, #B58B3D 100%);
+            text-align: center;
+        }
+
+        .banner .introduce .video-wrapper {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            border: 1px solid rgb(152, 118, 48);
+            width: 222px;
+            height: 122px;
+        }
+
+        .banner .introduce .video-wrapper .cover {
+            position: absolute;
+            top: 227px;
+            left: 1px;
+            background: rgba(0, 0, 0, 1) url('./pic/video-cover.jpg') no-repeat 0 0;
+            z-index: 1;
+            width: 220px;
+            height: 120px;
+        }
+
+        .banner .introduce .video-wrapper .cover .icon-play {
+            position: relative;
+            top: 35px;
+            left: 85px;
+            width: 50px;
+            height: 50px;
+            background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat -220px -30px;
+        }
+
+        .banner .version {
+            position: relative;
+            right: -900px;
+            bottom: 10px;
+            width: 170px;
+        }
+
+        .banner .version p {
+            font-size: 16px;
+            color: #aaaaaa;
+        }
+
+        .banner .version p span {
+            color: #f5d185;
+        }
+
+        .banner .version .versionMore a {
+            width: 82px;
+            line-height: 20px;
+            color: #CB9D46;
+            display: block;
+            border-top: 4px solid #6B5128;
+            border-bottom: 4px solid #B58B3D;
+            font-size: 14px;
+            background-position: 0 0, 100% 0;
+            background-repeat: no-repeat;
+            background-size: 4px 100%;
+            background-image: linear-gradient(to bottom, #6B5128 0%, #B58B3D 100%), linear-gradient(to bottom, #6B5128 0%, #B58B3D 100%);
+            text-align: center;
+            position: relative;
+            right: -200px;
+            bottom: 25px;
         }
     </style>
 </head>
@@ -309,51 +403,59 @@
 
         </div>
     </div>
-
-</div>
-<div class="banner-wrapper">
-    <div class="banner">
-        <div class="logo"></div>
-        <div class="introduce">
-            <h2>对决！黎明VS黑夜</h2>
-            <p>秩序，混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
-            <div class="video-wrapper">
-                <div class="cover">
-                    <div class="icon icon-play"></div>
-                    <div class="icon icon-pause"></div>
+    <div class="banner-wrapper">
+        <div class="banner">
+            <div class="logo"></div>
+            <div class="introduce">
+                <h2>对决！黎明VS黑夜</h2>
+                <p>秩序，混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
+                <div class="video-wrapper">
+                    <div class="cover">
+                        <div class="icon icon-play"></div>
+                        <div class="icon icon-pause"></div>
+                    </div>
+                    <video src="./videos/small-v7.mp4"></video>
                 </div>
-                <video src="./videos/small-v7.mp4"></video>
+                <a href="#">查看详情</a>
             </div>
-            <a href="#">查看详情</a>
-        </div>
-        <div class="version">
-            <p>当前游戏版本 <span>Ver 7.13</span></p>
-            <div class="versionMore">版本详情</div>
+            <div class="version">
+                <p>当前游戏版本 : <span>Ver 7.13</span></p>
+                <div class="versionMore"><a href="#">版本详情</a></div>
+            </div>
         </div>
     </div>
 </div>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-    $('.navigation').on('mouseenter', function () {
-        $('.subMenu').addClass('active')
+    $('.topbar .navigation .menu').on('mouseenter', function () {
+        $('.topbar .navigation .subMenu').addClass('active')
     }).on('mouseleave', function () {
-        $('.subMenu').removeClass('active')
+        $('.topbar .navigation .subMenu').removeClass('active')
     })
-    $('.subMenu').on('mouseenter', function () {
-        $('.subMenu').addClass('active')
+    $('.topbar .navigation .subMenu').on('mouseenter', function () {
+        $('.topbar .navigation .subMenu').addClass('active')
     }).on('mouseleave', function () {
-        $('.subMenu').removeClass('active')
+        $('.topbar .navigation .subMenu').removeClass('active')
     })
-
-    $('.user').on('mouseenter', function () {
-        $('.userPopover').addClass('active')
+    $('.topbar .user .avatar').on('mouseenter', function () {
+        $('.topbar .user .userPopover').addClass('active')
     }).on('mouseleave', function () {
-        $('.userPopover').removeClass('active')
+        $('.topbar .user .userPopover').removeClass('active')
     })
-    $('.userPopover').on('mouseenter', function () {
-        $('.userPopover').addClass('active')
+    $('.topbar .user .text').on('mouseenter', function () {
+        $('.topbar .user .userPopover').addClass('active')
     }).on('mouseleave', function () {
-        $('.userPopover').removeClass('active')
+        $('.topbar .user .userPopover').removeClass('active')
+    })
+    $('.topbar .user .userPopover').on('mouseenter', function () {
+        $('.topbar .user .userPopover').addClass('active')
+    }).on('mouseleave', function () {
+        $('.topbar .user .userPopover').removeClass('active')
+    })
+    $('.video-wrapper > .cover > .icon-play').on('click', function (e) {
+        let $play = $(e.currentTarget)
+        $play.closest('.video-wrapper').find('video')[0].play()
+        $play.closest('.cover').hide()
     })
 </script>
 </body>
