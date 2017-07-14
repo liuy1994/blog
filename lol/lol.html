@@ -168,6 +168,7 @@
             height: 100px;
             line-height: 1.5;
             padding: 25px 20px 20px 20px;
+            color: #aaaaaa;
         }
 
         .topbar .user .userPopover .textB {
@@ -296,8 +297,6 @@
             right: -200px;
             bottom: 25px;
         }
-
-
         .topbar .navigation .subMenu li .icon{
             background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 0 0;
             width: 27px; height: 27px; display: inline-block;
@@ -315,7 +314,30 @@
             vertical-align: middle;
         }
 
-
+        .tab-wrapper .tabs{
+            width:100%;
+            height: 80px;
+            border-top: 2px solid rgb(140,108,45);
+            position: relative;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) repeat-x 0 -257px;
+        }
+        .tab-wrapper .tabs ul{
+            position: relative;
+            left: 335px;
+        }
+        .tab-wrapper .tabs ul li{
+            width: 110px;
+            height: 60px;
+            float: left;
+            font-size:20px;
+            line-height:60px;
+            text-align: center;
+            margin-right:50px;
+        }
+        .tab-wrapper .tabs ul li.active{
+            color: #d1ab57;
+            border-bottom: 2px solid #d1ab57;
+        }
 
     </style>
 </head>
@@ -443,6 +465,43 @@
                 <p>当前游戏版本 : <span>Ver 7.13</span></p>
                 <div class="versionMore"><a href="#">版本详情</a></div>
             </div>
+        </div>
+    </div>
+    <div class="tab-wrapper">
+        <div class="tabs">
+            <ul class="clearfix">
+                <li class="active">综合资讯</li>
+                <li>视频中心</li>
+                <li>赛事中心</li>
+                <li>活动中心</li>
+            </ul>
+        </div>
+        <div class="contents">
+            <div class="news">
+                <div class="slides">
+                    <img src="" alt="无极剑圣斩星魔剑">
+                    <img src="" alt="庆LPL登顶亚洲">
+                    <img src="" alt="LPL15日赛程">
+                    <img src="" alt="洲际赛冠军之选">
+                    <img src="" alt="新英雄凯隐大揭密">
+                </div>
+
+
+
+
+                <div class="about"></div>
+                <div class="allNews"></div>
+                <div class="heros"></div>
+                <div class="research"></div>
+                <div class="recommends"></div>
+
+
+
+
+            </div>
+            <div class="videos"></div>
+            <div class="events"></div>
+            <div class="activities"></div>
         </div>
     </div>
 </div>
