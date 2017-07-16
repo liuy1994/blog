@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <title>LOL</title>
@@ -14,7 +15,7 @@
             list-style: none;
         }
 
-        video, img {
+        video,img {
             vertical-align: top;
         }
 
@@ -266,7 +267,7 @@
 
         .banner .version {
             position: relative;
-            right: -900px;
+            right: -958px;
             bottom: 10px;
             width: 170px;
         }
@@ -297,306 +298,1266 @@
             right: -200px;
             bottom: 25px;
         }
-        .topbar .navigation .subMenu li .icon{
+
+        .topbar .navigation .subMenu li .icon {
             background: transparent url('http://ossweb-img.qq.com/images/lol/v2/spr-v2.png') no-repeat 0 0;
-            width: 27px; height: 27px; display: inline-block;
+            width: 27px;
+            height: 27px;
+            display: inline-block;
         }
-        .topbar .navigation .subMenu li .icon-hot{
+
+        .topbar .navigation .subMenu li .icon-hot {
             background-position: -107px 0;
             width: 16px;
             height: 16px;
             vertical-align: middle;
         }
-        .topbar .navigation .subMenu li .icon-new{
+
+        .topbar .navigation .subMenu li .icon-new {
             background-position: -129px 0;
             width: 16px;
             height: 16px;
             vertical-align: middle;
         }
 
-        .tab-wrapper .tabs{
-            width:100%;
+        .tab-wrapper .tabs {
+            width: 100%;
             height: 80px;
-            border-top: 2px solid rgb(140,108,45);
+            border-top: 2px solid rgb(140, 108, 45);
             position: relative;
             background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) repeat-x 0 -257px;
         }
-        .tab-wrapper .tabs ul{
+
+        .tab-wrapper .tabs ul {
             position: relative;
             left: 335px;
         }
-        .tab-wrapper .tabs ul li{
+
+        .tab-wrapper .tabs ul li {
             width: 110px;
             height: 60px;
             float: left;
-            font-size:20px;
-            line-height:60px;
+            font-size: 20px;
+            line-height: 60px;
             text-align: center;
-            margin-right:50px;
+            margin-right: 50px;
         }
-        .tab-wrapper .tabs ul li.active{
+
+        .tab-wrapper .tabs ul li.active {
             color: #d1ab57;
             border-bottom: 2px solid #d1ab57;
         }
-        .tab-wrapper .contents .news{
+
+        .tab-wrapper .contents{
+            background: url(./pic/bg-content-bottom.jpg) no-repeat center bottom;
+            background: url(./pic/bg-content-top.jpg) no-repeat center top;
+            margin-top: -18px;
+        }
+
+        .tab-wrapper .contents .news {
             display: none;
         }
-        .tab-wrapper .contents .news.active{
+
+        .tab-wrapper .contents .news.active {
             display: block;
         }
-        .tab-wrapper .contents .news .slides{
-            width:820px;
+
+        .tab-wrapper .contents .news .slides {
+            width: 820px;
             position: relative;
-            left: 335px;
+            left: 330px;
+            top:50px;
         }
-        .tab-wrapper .contents .news .slides .slidesjs-pagination::after{
-            content:'';
+
+        .tab-wrapper .contents .slides .slidesjs-container .slidesjs-control img{
+            height: 350px;
+            width:820px;
+        }
+
+        .tab-wrapper .contents .news .slides .slidesjs-pagination::after {
+            content: '';
             display: block;
             clear: both;
         }
-        .tab-wrapper .contents .news .slides .slidesjs-pagination li{
+
+        .tab-wrapper .contents .news .slides .slidesjs-pagination li {
             float: left;
-            width:20%;
-            background-color:black; 
+            width: 20%;
+            background-color: black;
         }
-        .tab-wrapper .contents .news .slides .slidesjs-pagination li a{
-            color:white;
+
+        .tab-wrapper .contents .news .slides .slidesjs-pagination li a {
+            color: white;
             font-size: 14px;
             line-height: 50px;
             text-align: center;
             display: block;
         }
-            
-        .tab-wrapper .contents .news .slides .slidesjs-pagination li .active{
-            color:#e9c06c;
+
+        .tab-wrapper .contents .news .slides .slidesjs-pagination li .active {
+            color: #e9c06c;
             background: #303030;
+        }
+
+        .tab-wrapper .contents .news .about {
+            height: 400px;
+            width:400px;
+            position:relative;
+            top:-350px;
+            left:1170px;
+            background:transparent url(./pic/bg-download.jpg) no-repeat 0px 0px;
+        }
+
+        .tab-wrapper .contents .news .about ul{
+            position: relative;
+            top:180px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+        }
+
+        .tab-wrapper .contents .news .about ul li{
+            line-height: 55px;
+            width:130px;
+            text-align: center;
+            background-color:white;
+            font-size: 14px;
+        }
+
+        .tab-wrapper .contents .news .about ul li:hover{
+            background-color: rgb(240,240,240);
+        }
+
+        .tab-wrapper .contents .news .about ul li i{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img1{
+            background:transparent url(./pic/spr-v2.png) no-repeat -201px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img2{
+            background:transparent url(./pic/spr-v2.png) no-repeat -561px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img3{
+            background:transparent url(./pic/spr-v2.png) no-repeat -591px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img4{
+            background:transparent url(./pic/spr-v2.png) no-repeat -381px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img5{
+            background:transparent url(./pic/spr-v2.png) no-repeat -651px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img6{
+            background:transparent url(./pic/spr-v2.png) no-repeat -291px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img7{
+            background:transparent url(./pic/spr-v2.png) no-repeat -621px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img8{
+            background:transparent url(./pic/spr-v2.png) no-repeat -261px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img9{
+            background:transparent url(./pic/spr-v2.png) no-repeat -471px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img10{
+            background:transparent url(./pic/spr-v2.png) no-repeat -501px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img11{
+            background:transparent url(./pic/spr-v2.png) no-repeat -411px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .img12{
+            background:transparent url(./pic/spr-v2.png) no-repeat -441px -1px;
+        }
+
+        .tab-wrapper .contents .news .about ul li .icon-hot{
+            background: transparent url(./pic/spr-v2.png) no-repeat -108px -1px;
+            position: absolute;
+            width: 14px;
+            height: 14px;            
+        }
+
+        .tab-wrapper .contents .news .about ul li .icon-new{
+            background: transparent url(./pic/spr-v2.png) no-repeat -130px -1px;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            
+        }
+
+        .tab-wrapper .contents .news .allNews{
+            float: left;
+            height: 715px;
+            width:820px;
+            margin:-280px 20px 60px 330px;
+            position: relative;
+        }
+
+        .tab-wrapper .contents .news .allNews h3{
+            font-size: 26px;
+            line-height: 47px;
+            border-bottom: 3px solid #ededed;
+            width:145px;
+            float: left;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-tabs ul{
+            float: left;
+        }
+  
+        .tab-wrapper .contents .news .allNews .news-tabs ul li.active{
+            color:#d1ab57;
+            font-weight:bolder;
+            border-bottom:3px solid #d1ab57;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-tabs ul li{
+            line-height: 47px;
+            width:168px;
+            text-align: center;
+            float: left;
+            border-bottom: 3px solid #ededed;
+            font-size: 18px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .complex{
+            display:  none;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .top{
+            margin-top:80px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .top img{
+            width:200px;
+            height: 124px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .top a h2{
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .top a span{
+            font-size: 14px;
+            color:#898989;
+            display: block;
+            height: 60px;
+            padding-top:5px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .platform .top a span{
+            font-size: 14px;
+            color:#898989;
+            display: block;
+            height: 10px;
+            padding-top:5px;           
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content ul{
+            margin-top:30px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content ul li{
+            width:820px;
+            height: 43px;
+            padding:4px 0;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content ul li .header{
+            width:68px;
+            line-height: 35px;
+            background-color: #ebebeb;
+            text-align: center;
+            color: #7a7a7a;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content ul li a{
+            font-size: 16px;
+            padding-left:10px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content ul li .date{
+            text-align: right;
+            margin-top:-30px;
+            margin-right: 5px;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .complex.active{
+            display: block;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .official{
+            display:  none;
+        }
+
+        .tab-wrapper .contents .news .allNews .news-content .official.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .allNews .news-content .events{
+            display:  none;
+        }
+        .tab-wrapper .contents .news .allNews .news-content .events.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .allNews .news-content .platform{
+            display:  none;
+        }
+        .tab-wrapper .contents .news .allNews .news-content .platform.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .allNews .more-read{
+            margin-top:15px;
+            width:820px;
+            line-height: 50px;
+            text-align: center;
+            background: #f0f0f0;
+            font-size: 16px;
+        }
+        .tab-wrapper .contents .news .allNews .more-read a{
+            color:#d1ab57;
+        }
+        .tab-wrapper .contents .news .heroes{
+            height:720px;
+            width:401px;
+            float: left;
+            margin-top: -275px;
+            margin-bottom: 60px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-tabs ul{
+            height: 50px;
+            margin-bottom: 15px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-tabs ul li{
+            border-bottom: 3px solid #f0f0f0;
+            width:133px;
+            line-height:40px;
+            text-align: center;
+            float: left;
+            font-size: 16px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-tabs ul li.active{
+            color:3px solid #d1ab57;
+            border-bottom: 3px solid #d1ab57;
+            font-weight: bolder;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content{
+            width:400px;
+            height: 430px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes{
+            display: none;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: space-between;
+            width:400px;
+            height: 390px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul li{
+            position: relative;
+            font-size: 14px;
+            height: 70px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul li .name{
+            position: absolute;
+            background-color:#343434; 
+            color:#d1ab57;
+            width:195px;
+            line-height: 70px;
+            text-align: center;
+            display: none;
+            z-index: 2;
+            top:0;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul li .name.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul li a img{
+            width:195px;
+            height: 70px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes>p{
+            color:#9F9F9F;
+            width:400px;
+            line-height: 20px;
+            height: 40px;
+            text-align: right;
+            font-size: 14px;
+        }
+        .tab-wrapper .contents .news .heroes .research{
+            margin-top:20px;
+        }
+        .tab-wrapper .contents .news .heroes .research>a img{
+            width:400px;
+            height: 90px;            
+        }
+        .tab-wrapper .contents .news .heroes .research .tips{
+            margin-top: 35px;
+        }
+        .tab-wrapper .contents .news .heroes .research .tips .img{
+            width:70px;
+            height: 70px;
+            background: url(./pic/spr-v2.png) no-repeat -330px -89px;
+            float: left;
+        }
+        .tab-wrapper .contents .news .heroes .research .tips h5{
+            font-size: 14px;
+            line-height: 2;
+            padding-left:75px;
+        }
+        .tab-wrapper .contents .news .heroes .research .tips p{
+            font-size: 12px;
+            line-height: 1.6;
+            padding-left:75px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins{
+            display: none;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins>img{
+            width:400px;
+            height: 145px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: space-between;
+            width:400px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins ul li{
+            position: relative;
+            font-size: 14px;
+            height: 70px;
+            margin-top:10px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins ul li .name{
+            position: absolute;
+            background-color:#343434; 
+            color:#d1ab57;
+            width:195px;
+            line-height: 70px;
+            text-align: center;
+            display: none;
+            z-index: 2;
+            top:0;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins ul li .name.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-skins ul li a img{
+            width:195px;
+            height: 70px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes{
+            display: none;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: space-between;
+            width:400px;
+            height: 390px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes ul li{
+            position: relative;
+            font-size: 14px;
+            height: 70px;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes ul li .name{
+            position: absolute;
+            background-color:#343434; 
+            color:#d1ab57;
+            width:195px;
+            line-height: 70px;
+            text-align: center;
+            display: none;
+            z-index: 2;
+            top:0;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes ul li .name.active{
+            display: block;
+        }
+        .tab-wrapper .contents .news .heroes .hero-content .last-heroes ul li a img{
+            width:195px;
+            height: 70px;
+        }
+        .tab-wrapper .contents .recommend{
+            width:1240px;
+            height: 325px;
+            position: relative;
+            left:330px;
+            /* margin-top:300px;
+            margin-bottom: 50px;
+            margin-left:250px; */
+        }
+        .tab-wrapper .contents .recommend h3{
+            font-size: 26px;
+            line-height: 47px;
+            border-bottom: 3px solid #ededed;
+            width:145px;
+            float: left;
+        }
+
+        .tab-wrapper .contents .recommend .recommend-tabs ul{
+            float: left;
         }
     </style>
 </head>
+
 <body>
-<div class="page">
-    <div class="topbar-wrapper">
-        <div class="topbar">
-            <div class="navigation">
-                <ul class="menu clearfix">
-                    <li>
-                        <p>游戏资料</p>
-                        <p>
-                            <small>game info</small>
-                        </p>
-                    </li>
-                    <li>
-                        <p>商城/合作</p>
-                        <p>
-                            <small>store</small>
-                        </p>
-                    </li>
-                    <li>
-                        <p>用户互动</p>
-                        <p>
-                            <small>community</small>
-                        </p>
-                    </li>
-                    <li>
-                        <p>赛事中心</p>
-                        <p>
-                            <small>events</small>
-                        </p>
-                    </li>
-                    <li>
-                        <p>自助系统</p>
-                        <p>
-                            <small>system</small>
-                        </p>
-                    </li>
-                </ul>
-                <ul class="subMenu">
-                    <li>
-                        <a href="#" target="_top">新手指引</a>
-                        <a href="#" target="_top"><i class="icon icon-hot"></i>资料库</a>
-                        <a href="#" target="_top">攻略中心</a>
-                        <a href="#" target="_top">模式实验室</a>
-                        <a href="#" target="_top">海克斯战利品库</a>
-                        <a href="#" target="_top">屏保下载</a>
-                        <a href="#" target="_top"><i class="icon-new"></i>宇宙官网</a>
-                    </li>
-                    <li>
-                        <a target="_top" href="#">点券充值</a>
-                        <a target="_top" href="#">道聚城</a>
-                        <a href="#" target="_top">周边商城</a>
-                        <a href="#" target="_top">LOL桌游</a>
-                        <a href="#" target="_top">LOL信用卡</a>
-                        <a href="#" target="_top">网吧特权</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_top">在线客服</a>
-                        <a href="#" target="_top">视频中心</a>
-                        <a href="#" target="_top"><i class="icon icon-hot"></i>活动中心</a>
-                        <a target="_top" href="#">官方论坛</a>
-                        <a href="#" target="_top">官方微信</a>
-                        <a href="#" target="_top">官方微博</a>
-                    </li>
-                    <li>
-                        <a target="_top" href="#"><i class="icon icon-hot"></i>LPL职业联赛</a>
-                        <a target="_top" href="#">甲级职业联赛</a>
-                        <a target="_top" href="#">德玛西亚杯</a>
-                        <a target="_top" href="#">城市争霸赛</a>
-                        <a target="_top" href="#">高校联赛</a>
-                        <a target="_top" href="#">校际精英赛</a>
-                        <a target="_top" href="#">高校自发赛</a>
-                    </li>
-                    <li>
-                        <a target="_top" href="#">点亮图标</a>
-                        <a target="_top" href="#">声望系统</a>
-                        <a target="_top" href="#"><i class="icon icon-hot"></i>封号查询</a>
-                        <a target="_top" href="#">体验服申请</a>
-                        <a target="_top" href="#">服务器状态查询</a>
-                        <a target="_top" href="#">裁决之镰</a>
-                        <a target="_top" href="#"><i class="icon-new"></i>峡谷之巅</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="icons clearfix">
-                <div class="iconSearch"></div>
-                <div class="iconMobile"></div>
-            </div>
-            <div class="user clearfix">
-                <div class="avatar clearfix">
-                    <img src="https://ooo.0o0.ooo/2017/07/11/59648ff50b7da.png" alt="用户头像">
+    <div class="page">
+        <div class="topbar-wrapper">
+            <div class="topbar">
+                <div class="navigation">
+                    <ul class="menu clearfix">
+                        <li>
+                            <p>游戏资料</p>
+                            <p>
+                                <small>game info</small>
+                            </p>
+                        </li>
+                        <li>
+                            <p>商城/合作</p>
+                            <p>
+                                <small>store</small>
+                            </p>
+                        </li>
+                        <li>
+                            <p>用户互动</p>
+                            <p>
+                                <small>community</small>
+                            </p>
+                        </li>
+                        <li>
+                            <p>赛事中心</p>
+                            <p>
+                                <small>events</small>
+                            </p>
+                        </li>
+                        <li>
+                            <p>自助系统</p>
+                            <p>
+                                <small>system</small>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="subMenu">
+                        <li>
+                            <a href="#" target="_top">新手指引</a>
+                            <a href="#" target="_top"><i class="icon icon-hot"></i>资料库</a>
+                            <a href="#" target="_top">攻略中心</a>
+                            <a href="#" target="_top">模式实验室</a>
+                            <a href="#" target="_top">海克斯战利品库</a>
+                            <a href="#" target="_top">屏保下载</a>
+                            <a href="#" target="_top"><i class="icon-new"></i>宇宙官网</a>
+                        </li>
+                        <li>
+                            <a target="_top" href="#">点券充值</a>
+                            <a target="_top" href="#">道聚城</a>
+                            <a href="#" target="_top">周边商城</a>
+                            <a href="#" target="_top">LOL桌游</a>
+                            <a href="#" target="_top">LOL信用卡</a>
+                            <a href="#" target="_top">网吧特权</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_top">在线客服</a>
+                            <a href="#" target="_top">视频中心</a>
+                            <a href="#" target="_top"><i class="icon icon-hot"></i>活动中心</a>
+                            <a target="_top" href="#">官方论坛</a>
+                            <a href="#" target="_top">官方微信</a>
+                            <a href="#" target="_top">官方微博</a>
+                        </li>
+                        <li>
+                            <a target="_top" href="#"><i class="icon icon-hot"></i>LPL职业联赛</a>
+                            <a target="_top" href="#">甲级职业联赛</a>
+                            <a target="_top" href="#">德玛西亚杯</a>
+                            <a target="_top" href="#">城市争霸赛</a>
+                            <a target="_top" href="#">高校联赛</a>
+                            <a target="_top" href="#">校际精英赛</a>
+                            <a target="_top" href="#">高校自发赛</a>
+                        </li>
+                        <li>
+                            <a target="_top" href="#">点亮图标</a>
+                            <a target="_top" href="#">声望系统</a>
+                            <a target="_top" href="#"><i class="icon icon-hot"></i>封号查询</a>
+                            <a target="_top" href="#">体验服申请</a>
+                            <a target="_top" href="#">服务器状态查询</a>
+                            <a target="_top" href="#">裁决之镰</a>
+                            <a target="_top" href="#"><i class="icon-new"></i>峡谷之巅</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="text">
-                    <p>亲爱的召唤师，欢迎<a href="#">登录</a></p>
-                    <p>
-                        <small>登陆后查看自己的战绩、资产、声望值等</small>
-                    </p>
+                <div class="icons clearfix">
+                    <div class="iconSearch"></div>
+                    <div class="iconMobile"></div>
                 </div>
-                <div class="userPopover">
-                    <div class="textA">登录并且绑定大区后才可查看您的具体信息哦~（包括战绩、资产、声望值等）</div>
-                    <div class="textB"><a href="#">进入个人中心</a></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="banner-wrapper">
-        <div class="banner">
-            <div class="logo"></div>
-            <div class="introduce">
-                <h2>对决！黎明VS黑夜</h2>
-                <p>秩序，混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
-                <div class="video-wrapper">
-                    <div class="cover">
-                        <div class="icon icon-play"></div>
-                        <div class="icon icon-pause"></div>
+                <div class="user clearfix">
+                    <div class="avatar clearfix">
+                        <img src="https://ooo.0o0.ooo/2017/07/11/59648ff50b7da.png" alt="用户头像">
                     </div>
-                    <video src="./pic/small-v7.mp4"></video>
+                    <div class="text">
+                        <p>亲爱的召唤师，欢迎<a href="#">登录</a></p>
+                        <p>
+                            <small>登陆后查看自己的战绩、资产、声望值等</small>
+                        </p>
+                    </div>
+                    <div class="userPopover">
+                        <div class="textA">登录并且绑定大区后才可查看您的具体信息哦~（包括战绩、资产、声望值等）</div>
+                        <div class="textB"><a href="#">进入个人中心</a></div>
+                    </div>
                 </div>
-                <a href="#">查看详情</a>
+
             </div>
-            <div class="version">
-                <p>当前游戏版本 : <span>Ver 7.13</span></p>
-                <div class="versionMore"><a href="#">版本详情</a></div>
+        </div>
+        <div class="banner-wrapper">
+            <div class="banner">
+                <div class="logo"></div>
+                <div class="introduce">
+                    <h2>对决！黎明VS黑夜</h2>
+                    <p>秩序，混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
+                    <div class="video-wrapper">
+                        <div class="cover">
+                            <div class="icon icon-play"></div>
+                            <div class="icon icon-pause"></div>
+                        </div>
+                        <video src="./pic/small-v7.mp4"></video>
+                    </div>
+                    <a href="#">查看详情</a>
+                </div>
+                <div class="version">
+                    <p>当前游戏版本 : <span>Ver 7.13</span></p>
+                    <div class="versionMore"><a href="#">版本详情</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-wrapper">
+            <div class="tabs">
+                <ul class="clearfix">
+                    <li class="active">综合资讯</li>
+                    <li>视频中心</li>
+                    <li>赛事中心</li>
+                    <li>活动中心</li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="news active">
+                    <div class="slides">
+                        <img src="./pic/101.jpg" alt="无极剑圣斩星魔剑">
+                        <img src="./pic/102.jpg" alt="庆LPL登顶亚洲">
+                        <img src="./pic/103.jpg" alt="LPL15日赛程">
+                        <img src="./pic/104.jpg" alt="洲际赛冠军之选">
+                        <img src="./pic/105.jpg" alt="新英雄凯隐大揭密">
+                    </div>
+                    <div class="about">
+                        <ul>
+                            <li><i class="img1"></i>新手推荐</li>
+                            <li><i class="img2"></i>宇宙官网<i class="icon-hot"></i></li>
+                            <li><i class="img3"></i>周边商城</li>
+                            <li><i class="img4"></i>新客户端<i class="icon-new"></i></li>
+                            <li><i class="img5"></i>峡谷之巅<i class="icon-new"></i></li>
+                            <li><i class="img6"></i>CDK兑换</li>
+                            <li><i class="img7"></i>轮换模式<i class="icon-hot"></i></li>
+                            <li><i class="img8"></i>游戏资料</li>
+                            <li><i class="img9"></i>领奖中心</li>
+                            <li><i class="img10"></i>官方微博</li>
+                            <li><i class="img11"></i>玩家论坛</li>
+                            <li><i class="img12"></i>在线客服</li>
+                        </ul>
+                    </div>
+                    <div class="allNews clearfix">
+                        <h3 class='clearfix'>最新资讯</h3>
+                        <div class="news-tabs clearfix">
+                            <ul>
+                                <li class="active">综合新闻</li>
+                                <li>官方公告</li>
+                                <li>赛事新闻</li>
+                                <li>论坛资讯</li>
+                            </ul>
+                        </div>
+                        <div class="news-content">
+                            <div class="complex active">
+                                <div class="top">
+                                    <img class="clearfix" src="./pic/pic-news1.jpg" alt="图片">
+                                    <a href="#"><h2>无极剑圣的斩星魔剑开启</h2><span>珍稀守卫限时销售，赠送魔法星尘！</span></a>
+                                    
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">符文角：流星抢先看</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">对决不为人知的结局</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">OMG对阵EDG 黑暗势力冲击七连胜</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">官方赛事解说与主持人招募启动</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">峡谷之巅正式赛季宣传片</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>    
+                                        <div class="header">新闻</div>
+                                        <a href="#">新英雄凯隐揭秘站</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">洲际赛冠军回馈活动 来掌盟围观夺冠成员</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">全球高校杯将于7月13日开战！</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">秩序&混沌动画制作花絮</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">7月14日免费英雄更换公告</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="official">
+                                <div class="top">
+                                    <img class="clearfix" src="./pic/pic-news.jpg" alt="图片">
+                                    <a href="#"><h2>祖安大区紧急停机维护公告</h2><span></span></a>
+                                    
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">符文角：流星抢先看</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">对决不为人知的结局</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">OMG对阵EDG 黑暗势力冲击七连胜</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">官方赛事解说与主持人招募启动</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">峡谷之巅正式赛季宣传片</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>    
+                                        <div class="header">新闻</div>
+                                        <a href="#">新英雄凯隐揭秘站</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">洲际赛冠军回馈活动 来掌盟围观夺冠成员</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">全球高校杯将于7月13日开战！</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">秩序&混沌动画制作花絮</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">7月14日免费英雄更换公告</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="events">
+                                <div class="top">
+                                    <img class="clearfix" src="./pic/pic-news2.jpg" alt="图片">
+                                    <a href="#"><h2>EDG与OMG再对话 历史第八次交锋</h2>
+                                        <span>EDG官博直言“战强敌”！OMG发声，正视洲际赛不足，全力以赴迎战</span>
+                                    </a>                                    
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">符文角：流星抢先看</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">对决不为人知的结局</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">OMG对阵EDG 黑暗势力冲击七连胜</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">官方赛事解说与主持人招募启动</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">峡谷之巅正式赛季宣传片</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>    
+                                        <div class="header">新闻</div>
+                                        <a href="#">新英雄凯隐揭秘站</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">洲际赛冠军回馈活动 来掌盟围观夺冠成员</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">全球高校杯将于7月13日开战！</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">秩序&混沌动画制作花絮</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">7月14日免费英雄更换公告</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="platform">
+                                <div class="top">
+                                    <img class="clearfix" src="./pic/pic-news6.jpg" alt="图片">
+                                    <a href="#"><h2>【问拳头第三十一期】 性感英雄与屠夫之桥</h2>
+                                        <span>你们会制作英雄联盟电影吗？或者电影级的长视频</span>
+                                    </a>                                    
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">符文角：流星抢先看</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">对决不为人知的结局</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">OMG对阵EDG 黑暗势力冲击七连胜</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">官方赛事解说与主持人招募启动</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">峡谷之巅正式赛季宣传片</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>    
+                                        <div class="header">新闻</div>
+                                        <a href="#">新英雄凯隐揭秘站</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">洲际赛冠军回馈活动 来掌盟围观夺冠成员</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">全球高校杯将于7月13日开战！</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">秩序&混沌动画制作花絮</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                    <li>
+                                        <div class="header">新闻</div>
+                                        <a href="#">7月14日免费英雄更换公告</a>
+                                        <div class="date">07/13</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="more-read">阅读更多<a href="#">最新资讯</a></div>
+                    </div>
+                    <div class="heroes clearfix">
+                        <div class="hero-tabs">
+                            <ul>
+                                <li class="active">周免英雄</li>
+                                <li>最新皮肤</li>
+                                <li>最新英雄</li>
+                            </ul>
+                        </div>
+                        <div class="hero-content">
+                            <div class="weekly-heroes active">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">殇之木乃伊</div>
+                                            <img src="./pic/Amumu.jpg" alt="殇之木乃伊"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">深渊巨口</div> 
+                                            <img src="./pic/KogMaw.jpg" alt="深渊巨口"></img>                                           
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">盲僧</div>
+                                            <img src="./pic/LeeSin.jpg" alt="盲僧"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">光辉女郎</div>
+                                            <img src="./pic/Lux.jpg" alt="光辉女郎"></img></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">扭曲树精</div>
+                                            <img src="./pic/Maokai.jpg" alt="扭曲树精"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">幻翎</div>
+                                            <img src="./pic/Rakan.jpg" alt="幻翎"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">虚空遁地兽</div>
+                                            <img src="./pic/RekSai.jpg" alt="虚空遁地兽"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">瓦洛兰之盾</div>
+                                            <img src="./pic/Taric.jpg" alt="瓦洛兰之盾"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">卡牌大师</div>
+                                            <img src="./pic/TwistedFate.jpg" alt="卡牌大师"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">逆羽</div>
+                                            <img src="./pic/Xayah.jpg" alt="逆羽"></img>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p>免费时间：2017-07-07 至 2017-07-14</p>
+                            </div>
+                            <div class="last-skins">
+                                <img src="./pic/a20170703skt.jpg" alt="最新皮肤">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">黎明VS黑暗</div>
+                                            <img src="" alt="黎明VS黑暗"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">未来战士</div>
+                                            <img src="" alt="未来战士"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">神拳</div>
+                                            <img src="" alt="神拳"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">玩具大战系列</div>
+                                            <img src="" alt="玩具大战系列"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">血月系列</div>
+                                            <img src="" alt="血月系列"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">灭世魔神系列</div>
+                                            <img src="" alt="灭世魔神系列"></img>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="last-heroes">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">殇之木乃伊</div>
+                                            <img src="./pic/Amumu.jpg" alt="殇之木乃伊"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">深渊巨口</div> 
+                                            <img src="./pic/KogMaw.jpg" alt="深渊巨口"></img>                                           
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">盲僧</div>
+                                            <img src="./pic/LeeSin.jpg" alt="盲僧"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">光辉女郎</div>
+                                            <img src="./pic/Lux.jpg" alt="光辉女郎"></img></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">扭曲树精</div>
+                                            <img src="./pic/Maokai.jpg" alt="扭曲树精"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">幻翎</div>
+                                            <img src="./pic/Rakan.jpg" alt="幻翎"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">虚空遁地兽</div>
+                                            <img src="./pic/RekSai.jpg" alt="虚空遁地兽"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">瓦洛兰之盾</div>
+                                            <img src="./pic/Taric.jpg" alt="瓦洛兰之盾"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">卡牌大师</div>
+                                            <img src="./pic/TwistedFate.jpg" alt="卡牌大师"></img>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="name">逆羽</div>
+                                            <img src="./pic/Xayah.jpg" alt="逆羽"></img>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="research">
+                            <a href="#">
+                                <img src="./pic/survey.jpg" alt="research">
+                            </a>
+                            <div class="tips">
+                                <div class="img clearfix"></div>
+                                <h5>本游戏适合18岁（含）以上玩家娱乐</h5>
+                                <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+                                <p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend">
+                        <h3 class='clearfix'>最新资讯</h3>
+                        <div class="recommend-tabs clearfix">
+                            <ul>
+                                <li class="active">综合新闻</li>
+                                <li>官方公告</li>
+                                <li>赛事新闻</li>
+                                <li>论坛资讯</li>
+                            </ul>
+                        </div>
+                        <div class="recommend-content"></div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="videos"></div>
+                <div class="events"></div>
+                <div class="activities"></div>
             </div>
         </div>
     </div>
-    <div class="tab-wrapper">
-        <div class="tabs">
-            <ul class="clearfix">
-                <li class="active">综合资讯</li>
-                <li>视频中心</li>
-                <li>赛事中心</li>
-                <li>活动中心</li>
-            </ul>
-        </div>
-        <div class="contents">
-            <div class="news active">
-                <div  class="slides">
-                    <img src="./pic/101.jpg" alt="无极剑圣斩星魔剑">
-                    <img src="./pic/102.jpg" alt="庆LPL登顶亚洲">
-                    <img src="./pic/103.jpg" alt="LPL15日赛程">
-                    <img src="./pic/104.jpg" alt="洲际赛冠军之选">
-                    <img src="./pic/105.jpg" alt="新英雄凯隐大揭密">
-                </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $('.topbar .navigation .menu').on('mouseenter', function () {
+            $('.topbar .navigation .subMenu').addClass('active')
+        }).on('mouseleave', function () {
+            $('.topbar .navigation .subMenu').removeClass('active')
+        })
+        $('.topbar .navigation .subMenu').on('mouseenter', function () {
+            $('.topbar .navigation .subMenu').addClass('active')
+        }).on('mouseleave', function () {
+            $('.topbar .navigation .subMenu').removeClass('active')
+        })
+        $('.topbar .user .avatar').on('mouseenter', function () {
+            $('.topbar .user .userPopover').addClass('active')
+        }).on('mouseleave', function () {
+            $('.topbar .user .userPopover').removeClass('active')
+        })
+        $('.topbar .user .text').on('mouseenter', function () {
+            $('.topbar .user .userPopover').addClass('active')
+        }).on('mouseleave', function () {
+            $('.topbar .user .userPopover').removeClass('active')
+        })
+        $('.topbar .user .userPopover').on('mouseenter', function () {
+            $('.topbar .user .userPopover').addClass('active')
+        }).on('mouseleave', function () {
+            $('.topbar .user .userPopover').removeClass('active')
+        })
+        $('.video-wrapper  .cover  .icon-play').on('click', function (e) {
+            let $play = $(e.currentTarget)
+            $play.closest('.video-wrapper').find('video')[0].play()
+            $play.closest('.cover').hide()
+        })
+        $('.tab-wrapper .tabs ul').on('click', 'li', function (e) {
+            let $li = $(e.currentTarget)
+            let index = $li.index()
+            $li.addClass('active')
+            $li.siblings().removeClass('active')
+            $li.parent().parent().next().children().eq(index).addClass('active')
+            $li.parent().parent().next().children().eq(index).siblings().removeClass('active')
+        })
+        $('.tab-wrapper .contents .news .allNews .news-tabs ul li').hover(function(e){
+            let $li = $(e.currentTarget)
+            let index = $li.index()
+            $li.addClass('active')
+            $li.siblings().removeClass('active')
+            $li.parent().parent().next().children().eq(index).addClass('active')
+            $li.parent().parent().next().children().eq(index).siblings().removeClass('active')
+        })
+        $('.tab-wrapper .contents .news .heroes .hero-tabs ul li').hover(function(e){
+            let $li = $(e.currentTarget)
+            let index = $li.index()
+            $li.addClass('active')
+            $li.siblings().removeClass('active')
+            $li.parent().parent().next().children().eq(index).addClass('active')
+            $li.parent().parent().next().children().eq(index).siblings().removeClass('active')
+        })
+        $('.tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul').on('mouseenter','li',function(e){
+            $(e.currentTarget.children[0].children[0]).addClass('active')
+        })
+        $('.tab-wrapper .contents .news .heroes .hero-content .weekly-heroes ul').on('mouseleave','li',function(e){
+            $(e.currentTarget.children[0].children[0]).removeClass('active')
+        })
+        $('.tab-wrapper .contents .news .heroes .hero-content .last-skins ul').on('mouseenter','li',function(e){
+            $(e.currentTarget.children[0].children[0]).addClass('active')
+        })
+        $('.tab-wrapper .contents .news .heroes .hero-content .last-skins ul').on('mouseleave','li',function(e){
+            $(e.currentTarget.children[0].children[0]).removeClass('active')
+        })
 
+         $('.tab-wrapper .contents .news .heroes .hero-content .last-heroes ul').on('mouseenter','li',function(e){
+            $(e.currentTarget.children[0].children[0]).addClass('active')
+        })
+        $('.tab-wrapper .contents .news .heroes .hero-content .last-heroes ul').on('mouseleave','li',function(e){
+            $(e.currentTarget.children[0].children[0]).removeClass('active')
+        })
 
-
-
-                <div class="about"></div>
-                <div class="allNews"></div>
-                <div class="heros"></div>
-                <div class="research"></div>
-                <div class="recommends"></div>
-
-
-
-
-            </div>
-            <div class="videos"></div>
-            <div class="events"></div>
-            <div class="activities"></div>
-        </div>
-    </div>
-</div>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-    $('.topbar .navigation .menu').on('mouseenter', function () {
-        $('.topbar .navigation .subMenu').addClass('active')
-    }).on('mouseleave', function () {
-        $('.topbar .navigation .subMenu').removeClass('active')
-    })
-    $('.topbar .navigation .subMenu').on('mouseenter', function () {
-        $('.topbar .navigation .subMenu').addClass('active')
-    }).on('mouseleave', function () {
-        $('.topbar .navigation .subMenu').removeClass('active')
-    })
-    $('.topbar .user .avatar').on('mouseenter', function () {
-        $('.topbar .user .userPopover').addClass('active')
-    }).on('mouseleave', function () {
-        $('.topbar .user .userPopover').removeClass('active')
-    })
-    $('.topbar .user .text').on('mouseenter', function () {
-        $('.topbar .user .userPopover').addClass('active')
-    }).on('mouseleave', function () {
-        $('.topbar .user .userPopover').removeClass('active')
-    })
-    $('.topbar .user .userPopover').on('mouseenter', function () {
-        $('.topbar .user .userPopover').addClass('active')
-    }).on('mouseleave', function () {
-        $('.topbar .user .userPopover').removeClass('active')
-    })
-    $('.video-wrapper  .cover  .icon-play').on('click', function (e) {
-        let $play = $(e.currentTarget)
-        $play.closest('.video-wrapper').find('video')[0].play()
-        $play.closest('.cover').hide()
-    })
-    $('.tab-wrapper .tabs ul').on('click','li',function(e){
-        let $li = $(e.currentTarget)
-        let index = $li.index()
-        $li.addClass('active')
-        $li.siblings().removeClass('active')
-        console.log(1)
-        $li.parent().parent().next().children().eq(index).addClass('active')
-        $li.parent().parent().next().children().eq(index).siblings().removeClass('active')
-    })
-</script>
-<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
-<script src="./js/jquery.slides.min.js"></script>
-<script>
-    $(function(){
-      $(".slides").slidesjs({
-          height:350,
-        navigation:false,
-        callback: {
-          loaded: function(){
-            var texts = ['无极剑圣斩星魔剑','庆LPL登顶亚洲','LPL15日赛程','洲际赛冠军之选','新英雄凯隐大揭密']
-            $('.slidesjs-pagination-item').each(function(index, element){
-              element.children[0].innerText = texts[index]
-            })
-          }
-        }
-      })
-    })
+        
+    </script>
     
-  </script>
+    <script src="./js/jquery.slides.min.js"></script>
+    <script>
+        $(function () {
+            $(".slides").slidesjs({
+                height: 400,
+                navigation: false,
+                callback: {
+                    loaded: function () {
+                        var texts = ['无极剑圣斩星魔剑', '庆LPL登顶亚洲', 'LPL15日赛程', '洲际赛冠军之选', '新英雄凯隐大揭密']
+                        $('.slidesjs-pagination-item').each(function (index, element) {
+                            element.children[0].innerText = texts[index]
+                        })
+                    }
+                }
+            })
+        })
+    </script>
 </body>
+
 </html>
