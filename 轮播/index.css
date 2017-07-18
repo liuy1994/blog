@@ -1,0 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+ol {
+  list-style: none;
+}
+h1 {
+  height: 96px;
+  padding: 35px;
+  text-align: center;
+}
+h2 {
+  font-size: 16px;
+  text-align: center;
+  height: 20px;
+  margin-top: 0px;
+}
+p {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 30px;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin-top: 20px;
+  border: 1px solid rgb(217, 217, 217);
+}
+.window {
+  width: 960px;
+  height: 420px;
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+}
+.window li{
+  
+  transition: transform 0.8s;
+}
+.window li img {
+  width: 960px;
+}
+.controls {
+  background-color: rgb(244, 244, 244);
+  border: 1px solid rgb(224, 224, 224);
+  width: 960px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.controls li {
+  width: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgb(217, 217, 217);
+  position: relative;
+}
+.controls li:nth-child(0n+4) {
+  border-right: 1px solid rgb(217, 217, 217);
+}
+.controls img {
+  width: 25px;
+  height: 25px;
+}
+.controls .active {
+  background: radial-gradient(rgb(250, 250, 250), rgb(220, 220, 220), rgb(180, 180, 180));
+}
+.controls .active::after {
+  content: '';
+  border-top: 10px solid white;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: -1px;
+}
