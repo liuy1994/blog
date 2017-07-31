@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AJAX</title>
+  <style>
+    .errorMessage {
+      display: none;
+    }
+
+    input.error {
+      border-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/xxx" method="GET" id="loginForm">
+    <div>
+      <label>姓名：<input type="text" name="yyy" value="1"></label>
+    </div>
+    <div>
+      <label>密码：<input type="text" name="zzz" value="2"></label>
+    </div>
+    <input type="submit">
+  </form>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let yyy = loginForm.yyy.value;
+      let zzz = loginForm.zzz.value;
+      $('input.error').removeClass('error');
+      if ($.trim(yyy) !== '1') {
+        console.log($('input[name="yyy"]').next().text())
+        $('input[name="yyy"]').addClass('error');
+        return;
+      } else if (zzz !== '2') {
+        $('input[name="zzz"]').addClass('error');
+        return;
+      } else {
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+          if (request.readyState === 4) {
+            console.log('request.status:' + request.status);
+            console.log('request.responseText:' + request.responseText);
+            if (request.status >= 400) {
+              let { errors } = JSON.parse(request.responseText);
+              for (var key in errors) {
+                let value = errors[key];
+                $(`input[name="${key}"]`).addClass('error')
+                  .next('.errorMessage').text(value);
+              }
+            } else {
+              alert("Hello AJAX");
+            }
+          }
+        };
+        request.open('POST', `/xxx`);
+        request.send(`yyy=${yyy}&zzz=${zzz}`);
+      }
+    });
+  </script>
+</body>
+
+</html>
