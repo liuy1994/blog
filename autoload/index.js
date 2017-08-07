@@ -34,7 +34,7 @@ window.onscroll = function(){
     // these are relative to the viewport, i.e. the window
     var buttonTop = viewportOffset.top;
     console.log(clientHeight - buttonTop)
-    if(clientHeight > buttonTop + 100){
-          load()
+    if(clientHeight >= buttonTop + 103){
+        load()
     }
 }
