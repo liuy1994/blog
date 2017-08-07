@@ -33,7 +33,8 @@ window.onscroll = function(){
     var viewportOffset = loadMoreButton.getBoundingClientRect();
     // these are relative to the viewport, i.e. the window
     var buttonTop = viewportOffset.top;
-    if(clientHeight - buttonTop > 150){
-        load()
+    console.log(clientHeight - buttonTop)
+    if(clientHeight > buttonTop + 100){
+          load()
     }
 }
