@@ -1,29 +1,17 @@
-{
-    border:1px solid red;
+*{
+    /* border:1px solid red; */
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
-ul{
+ul,ol{
     list-style: none;
 }
-body{
+
+.layout515{
+    max-width:960px;
     margin:0 auto;
-    width:1440px;
 }
-@media(max-width:1439px){
-    body{
-        width:960px;
-    }
-}
-@media(max-width:959px){
-    body{
-        width:640px;
-    }
-}
-@media(max-width:639px){
-    body{
-        width:320px;
-    }
-}
-/*↑begin↑*/
 
 .profile{
     text-align: center;
@@ -51,7 +39,7 @@ body{
     padding-top: 75px;    
 }
 .summary .biaoti1{
-    width: 376px;
+    max-width: 376px;
     margin:0 auto 35px auto;
     background-color: #d8d8d8;
     padding: 0.3em 0.5em;
@@ -59,20 +47,6 @@ body{
 }
 .summary .biaoti2{
     display: none;
-}
-@media(max-width:639px){
-    .summary .biaoti1{
-        display: none;
-    }
-    .summary .biaoti2{
-        display: inline-block;
-        width: 200px;
-        padding:0.2em 0;
-        margin:0 auto 19px auto;
-        background-color: #d8d8d8;
-        padding: 0.3em 0.5em;
-        border-radius: 20px;
-    }
 }
 .summary p{
     display: inline-block;
@@ -85,28 +59,17 @@ body{
 }
 /*↑summary↑*/
 
-.album{
-    text-align: center;
-}
-.album ul{
+ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: -24px;
-    margin-right:16px;
 }
-@media(min-width:1440px){
-    .album ul{
-        margin-left:256px;
-        margin-right:256px;
-    }
+li{
+    margin-bottom:15px;
 }
-.album ul>li{
-    margin:2px;
-}
-.album img{
-    width: 288px;
-    height: 162px;
+img{
+    width: 300px;
+    height: 169px;
     background-color: #d8d8d8;
     border-radius: 5px;
 }
@@ -121,4 +84,25 @@ body{
     border-radius: 5px;
     font-size: 0.9em;
     padding:0.1em 0.2em;
+}
+.loadMore{
+    text-align: center; margin: 16px 0;
+}
+.button{
+    border: none;
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px 40px 20px 40px;
+    text-decoration: none;
+}
+.button:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+.blank{
+    height: 300px;
 }

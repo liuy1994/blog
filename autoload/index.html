@@ -4,8 +4,8 @@
     <meta charset="zh-hans">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./layout515.css">
-    <title>响应式布局</title>
+    <link rel="stylesheet" href="./index.css">
+    <title>自动加载</title>
 </head>
 <body>
     <div class="layout515">
@@ -27,7 +27,7 @@
             <p class="second">而龙渊全族进入了无尽幽暗的地界，数千年后封印之力逐渐衰减</p>
         </section>
         <section class="album">
-            <ul>
+            <ul id="list">
                 <li>
                     <img src="https://ooo.0o0.ooo/2017/05/15/59195636c1e45.jpg" alt="司命">
                     <h3>司命</h3>
@@ -76,11 +76,16 @@
                 </li>
                 <li>
                     <img src="https://ooo.0o0.ooo/2017/05/16/591a9aa4cff61.jpg" alt="阿阮">
-                    <h3>图片阿阮</h3>
+                    <h3>阿阮</h3>
                     <p>露草，软妹子</p>
                 </li>
             </ul>
         </section>
+        <div id="loadMore" class="loadMore">
+            <button id="loadMoreButton" class="button">加载更多</button>
+        </div>
     </div>
+    <div class="blank"></div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
