@@ -1,5 +1,6 @@
 let list = document.querySelector('#list')
 let n =1 
+let button = document.querySelector('#loadMoreButton')
 function load(){
     let request = new XMLHttpRequest()
     request.open('GET',`./page-${n+1}.html`)
@@ -17,27 +18,27 @@ function load(){
             list.insertAdjacentHTML('beforeend',liString)
         }
         if(data.hasNextPage === false){
-            loadMoreButton.textContent = '没有下一页了'
-            loadMoreButton.onclick = function(){
+            button.textContent = '没有下一页了'
+            button.onclick = function(){
                 alert('真的没有了')
             }
         }
     }
     request.send()
 }
-loadMoreButton.onclick = load
+button.onclick = load
 
-let button = document.querySelector('#loadMoreButton')
+
 window.onscroll = function(){
     var doc = document.documentElement;
     var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
     var clientHeight = doc.clientHeight
-    var viewportOffset = loadMoreButton.getBoundingClientRect();
+    var viewportOffset = button.getBoundingClientRect();
     // these are relative to the viewport, i.e. the window
     var buttonTop = viewportOffset.top;
     console.log(clientHeight - buttonTop)
     if(Math.ceil(clientHeight - buttonTop) === 104){
-        if(loadMoreButton.textContent === '加载更多'){
+        if(button.textContent === '加载更多'){
             load()
         }
     }
