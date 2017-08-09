@@ -36,14 +36,9 @@ window.onscroll = function(){
     // these are relative to the viewport, i.e. the window
     var buttonTop = viewportOffset.top;
     console.log(clientHeight - buttonTop)
-<<<<<<< HEAD
     if(Math.ceil(clientHeight - buttonTop) === 104){
         if(loadMoreButton.textContent === '加载更多'){
             load()
         }
-=======
-    if(clientHeight > buttonTop + 103){
-        load()
->>>>>>> 2617499711d51cf74a8fb2210d52a8c13d8e2fc1
     }
 }
