@@ -17,8 +17,10 @@ function load(){
             list.insertAdjacentHTML('beforeend',liString)
         }
         if(data.hasNextPage === false){
-            loadMoreButton.disabled = true
-            loadMoreButton.textContent = '没有下一页了'            
+            loadMoreButton.textContent = '没有下一页了'
+            loadMoreButton.onclick = function(){
+                alert('真的没有了')
+            }
         }
     }
     request.send()
@@ -34,7 +36,9 @@ window.onscroll = function(){
     // these are relative to the viewport, i.e. the window
     var buttonTop = viewportOffset.top;
     console.log(clientHeight - buttonTop)
-    if(clientHeight >= buttonTop + 103){
-        load()
+    if(Math.ceil(clientHeight - buttonTop) === 104){
+        if(loadMoreButton.textContent === '加载更多'){
+            load()
+        }
     }
 }
