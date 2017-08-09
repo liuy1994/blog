@@ -4,8 +4,12 @@ let button = document.querySelector('#loadMoreButton')
 function load(){
     let request = new XMLHttpRequest()
     request.open('GET',`./page-${n+1}.html`)
+    request.onerror = function(){
+        loading = false
+    }
     request.onload = function(){
-        n = n+1
+        loading = false
+        n = n + 1
         let response = request.responseText
         let data = window.JSON.parse(response)
         for(let i=0;i<data.content.length;i++){
@@ -24,6 +28,7 @@ function load(){
             }
         }
     }
+    loading = true
     request.send()
 }
 button.onclick = load
@@ -37,7 +42,7 @@ window.onscroll = function(){
     // these are relative to the viewport, i.e. the window
     var buttonTop = viewportOffset.top;
     console.log(clientHeight - buttonTop)
-    if(Math.ceil(clientHeight - buttonTop) === 104){
+    if(clientHeight - buttonTop > 100){
         if(button.textContent === '加载更多'){
             load()
         }
