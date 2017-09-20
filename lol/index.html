@@ -268,7 +268,7 @@
         .banner .version {
             position: relative;
             right: -958px;
-            bottom: 10px;
+            bottom: 40px;
             width: 170px;
         }
 
@@ -319,18 +319,25 @@
             height: 16px;
             vertical-align: middle;
         }
-
+        .page{
+            position: relative;
+        }
+        .tab-wrapper{
+            width:100%;
+            min-width: 1240px;
+            position: relative;
+        }
         .tab-wrapper .tabs {
             width: 100%;
             height: 80px;
             border-top: 2px solid rgb(140, 108, 45);
-            position: relative;
             background: transparent url(./pic/spr-v2.png) repeat-x 0 -257px;
+            position: relative;
         }
 
         .tab-wrapper .tabs ul {
             position: relative;
-            margin-left: 335px;
+            margin-left: 160px;
         }
 
         .tab-wrapper .tabs ul li {
@@ -349,8 +356,8 @@
         }
 
         .tab-wrapper .contents {
-            background: url(./pic/bg-content-bottom.jpg) no-repeat center bottom;
-            background: url(./pic/bg-content-top.jpg) no-repeat center top;
+            margin-left: -175px;
+            background: url(./pic/bg-content-top.jpg) no-repeat;
             margin-top: -18px;
         }
 
@@ -698,13 +705,17 @@
         .tab-wrapper .contents .news .allNews .more-read a {
             color: #d1ab57;
         }
-
+        .tab-wrapper .contents .news{
+            position: relative;
+        }
         .tab-wrapper .contents .news .heroes {
             height: 720px;
             width: 401px;
-            float: left;
             margin-top: -275px;
             margin-bottom: 60px;
+            position: relative;
+            top:-720px;
+            left:1170px;
         }
 
         .tab-wrapper .contents .news .heroes .hero-tabs ul {
@@ -779,14 +790,16 @@
         .tab-wrapper .contents .news .heroes .hero-content .weekly-heroes>p {
             color: #9F9F9F;
             width: 400px;
-            line-height: 20px;
-            height: 40px;
+            line-height: 18px;
             text-align: right;
-            font-size: 14px;
+            margin-left: 50px;
+            font-size: 12px;
+            transform: scale(0.75)
         }
 
         .tab-wrapper .contents .news .heroes .research {
-            margin-top: 20px;
+            position: relative;
+            top:410px;
         }
 
         .tab-wrapper .contents .news .heroes .research>a img {
@@ -915,7 +928,7 @@
             width: 1240px;
             height: 325px;
             position: relative;
-            top:500px;
+            top:-10px;
             left:330px;
         }
 
@@ -956,12 +969,15 @@
         .tab-wrapper .contents .recommend .recommend-content{
             width:1240px;
             height: 380px;
+            position: relative;
+            top:0;
+            left:0;
         }
         .tab-wrapper .contents .recommend .recommend-content .videos{
             width:1240px;
             height: 190px;
             display: none;
-            top:-420px;
+            top:-150px;
             position: relative;
             justify-content: space-between;            
         }
